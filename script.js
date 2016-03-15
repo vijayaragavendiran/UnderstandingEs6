@@ -26,4 +26,9 @@ class Square {
 
 const squareInstance = new Square(10, 10);
 console.log('Class result :' + squareInstance.area);
-////
+////Template Strings
+function TemplateStrings(firstName){
+  console.log(`Hello ${firstName} I am a Template string !!`);
+}
+
+TemplateStrings('vijay');
