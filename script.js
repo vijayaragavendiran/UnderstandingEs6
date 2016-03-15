@@ -27,8 +27,28 @@ class Square {
 const squareInstance = new Square(10, 10);
 console.log('Class result :' + squareInstance.area);
 ////Template Strings
-function TemplateStrings(firstName){
-  console.log(`Hello ${firstName} I am a Template string !!`);
+function TemplateStrings(firstName) {
+  console.log(
+    `Hello ${firstName},
+                I am a Template string !!`);
 }
 
 TemplateStrings('vijay');
+
+//Arrow functions
+
+var nameList = list => console.log(list); //Arrow function =>
+
+nameList(['vijay', 'adam', 'robert']);
+
+var obj = {
+  name: 'vijay',
+  actions: ['cricket', 'football', 'hockey'],
+  printActions() {
+    this.actions.forEach(action => {
+      var str = `${this.name} likes to play ${action}`;
+      console.log(str);
+    })
+  }
+}
+obj.printActions();
