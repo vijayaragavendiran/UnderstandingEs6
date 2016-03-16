@@ -52,3 +52,11 @@ var obj = {
   }
 }
 obj.printActions();
+
+//Bind
+var calculate = function(){
+  console.log(this);
+  //console.log(arg);
+}
+var x = calculate.bind('hello');
+x();
