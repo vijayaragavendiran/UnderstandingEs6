@@ -54,9 +54,15 @@ var obj = {
 obj.printActions();
 
 //Bind
-var calculate = function(){
-  console.log(this);
+var calculate = function(x,y) {
+  //let a = this;
+
+  console.log(x + y);
   //console.log(arg);
 }
-var x = calculate.bind('hello');
+var e = {
+  val1: 1,
+  val2: 2
+}
+var x = calculate.apply(e.val1,e.val2);
 x();
