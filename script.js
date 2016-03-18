@@ -54,15 +54,17 @@ var obj = {
 obj.printActions();
 
 //Bind
-var calculate = function(x,y) {
+var calculate = function(x, y) {
   //let a = this;
 
-  console.log(x + y);
+  console.log(this.val2 + x + y);
   //console.log(arg);
 }
 var e = {
   val1: 1,
   val2: 2
 }
-var x = calculate.apply(e.val1,e.val2);
-x();
+calculate.call(e, 1, 3); //call takes individual args
+calculate.apply(e, [1, 3]); //apply takes array as params
+var c = calculate.bind(e, 1, 3);
+c();
