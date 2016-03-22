@@ -68,3 +68,15 @@ calculate.call(e, 1, 3); //call takes individual args
 calculate.apply(e, [1, 3]); //apply takes array as params
 var c = calculate.bind(e, 1, 3);
 c();
+
+//destructuring
+console.log('destructuring');
+var a = [1,2,4];
+var [x,y,z] = a;
+console.log(x);
+console.log(y);
+console.log(z);
+//default values
+var [a=4,b=7]=[]
+console.log(a);
+console.log(b);
